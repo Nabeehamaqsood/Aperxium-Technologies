@@ -17,6 +17,7 @@ import {
   Target,
   Zap,
   Star,
+  Cpu,
 } from "lucide-react"
 import Navbar from "@/components/navbar/Navbar"
 import Footer from "@/components/Landing_page/Footer"
@@ -49,13 +50,37 @@ export default function CyberSecurityPage() {
     },
   ]
 
-  const certifications = [
-    { name: "CISSP", description: "Certified Information Systems Security Professional", level: "Expert" },
-    { name: "CEH", description: "Certified Ethical Hacker", level: "Advanced" },
-    { name: "CISM", description: "Certified Information Security Manager", level: "Expert" },
-    { name: "GSEC", description: "GIAC Security Essentials", level: "Professional" },
-    { name: "OSCP", description: "Offensive Security Certified Professional", level: "Advanced" },
-    { name: "CISA", description: "Certified Information Systems Auditor", level: "Expert" },
+  const tools = [
+    { 
+      name: "Wazuh", 
+      description: "Open Source Security Monitoring", 
+      category: "SIEM & Monitoring",
+      icon: <Cpu className="w-8 h-8 text-[#3db1a2] hover:text-[#2e8f7f]" />
+    },
+    { 
+      name: "Yara", 
+      description: "Malware Identification Tool", 
+      category: "Threat Detection",
+      icon: <Shield className="w-8 h-8 text-[#3db1a2] hover:text-[#2e8f7f]" />
+    },
+    { 
+      name: "OpenVAS", 
+      description: "Vulnerability Scanner", 
+      category: "Vulnerability Assessment",
+      icon: <Target className="w-8 h-8 text-[#3db1a2] hover:text-[#2e8f7f]" />
+    },
+    { 
+      name: "Nikto", 
+      description: "Web Server Scanner", 
+      category: "Web Security",
+      icon: <Eye className="w-8 h-8 text-[#3db1a2] hover:text-[#2e8f7f]" />
+    },
+    { 
+      name: "Wazuh", 
+      description: "Intrusion Detection System", 
+      category: "IDS/IPS",
+      icon: <Network className="w-8 h-8 text-[#3db1a2] hover:text-[#2e8f7f]" />
+    },
   ]
 
   const process = [
@@ -83,14 +108,14 @@ export default function CyberSecurityPage() {
       title: "Security Implementation & Hardening",
       description:
         "We implement robust security controls, configure defensive systems, and harden your infrastructure to protect against identified threats.",
-      deliverables: ["Security Controls", "System Hardening", "Policy Implementation", "Access Control Setup"],
+      deliverables: ["Wazuh SIEM Setup", "Yara Rule Implementation", "OpenVAS Configuration", "Access Control Setup"],
     },
     {
       step: "04",
       title: "Ongoing Monitoring & Compliance",
       description:
         "Continuous security monitoring, regular assessments, and compliance management to ensure your security posture remains strong over time.",
-      deliverables: ["Monitoring Setup", "Compliance Reports", "Regular Assessments", "Incident Response Plan"],
+      deliverables: ["Wazuh Monitoring", "Nikto Web Scanning", "Regular Assessments", "Incident Response Plan"],
     },
   ]
 
@@ -159,33 +184,32 @@ export default function CyberSecurityPage() {
           </div>
         </section>
 
-        {/* Certifications Section */}
+        {/* Tools Section - Replaced Certifications */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Our Team's Advanced Certifications
+                Our Security Tools & Technologies
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our cybersecurity experts hold industry-leading certifications, ensuring you receive the highest level of
-                security expertise
+                We leverage industry-leading security tools and technologies to provide comprehensive protection for your business
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {certifications.map((cert, index) => (
-                <Card key={index} className="bg-white hover:shadow-lg transition-shadow">
+              {tools.map((tool, index) => (
+                <Card key={index} className="bg-white hover:shadow-lg transition-shadow border border-gray-100">
                   <CardContent className="p-6 text-center">
                     <div className="bg-[#e6f4f2] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Award className="w-8 h-8 text-[#3db1a2] hover:text-[#2e8f7f]" />
+                      {tool.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{cert.name}</h3>
-                    <p className="text-gray-600 mb-3">{cert.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{tool.name}</h3>
+                    <p className="text-gray-600 mb-3">{tool.description}</p>
                     <Badge
-                      variant={cert.level === "Expert" ? "default" : cert.level === "Advanced" ? "secondary" : "outline"}
-                      className="bg-[#3db1a2] text-white hover:bg-[#2e8f7f]"
+                      variant="outline"
+                      className="bg-[#3db1a2] text-white hover:bg-[#2e8f7f] border-[#3db1a2]"
                     >
-                      {cert.level}
+                      {tool.category}
                     </Badge>
                   </CardContent>
                 </Card>
