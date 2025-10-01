@@ -110,6 +110,11 @@ export default function Footer() {
                   UI/UX Designing
                 </a>
               </li>
+               <li>
+                <a href="/services/cyber-security" className="hover:text-purple-400 transition-colors text-sm lg:text-base">
+                  Cyber Security
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -12,6 +12,7 @@ const services = [
   { name: "AI Automation", href: "/services/ai-automation" },
   { name: "Graphic Designing", href: "/services/graphic-designing" },
   { name: "UI/UX Designing", href: "/services/UIUX" },
+  { name: "Cyber Security", href: "/services/cyber-security" }, 
 ]
 
 const industries = [

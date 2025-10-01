@@ -10,7 +10,7 @@ const services = [
   description: "Native and cross-platform mobile applications for Android and iOS.",
   technologies: ["IOS", "Dart", "Java", "Kotlin", "Flutter" , "PHP", "Firebase", "Andriod"],
   icon: <Smartphone className="w-8 h-8" />,
-  link: "/services/mobile-developmentt",
+  link: "/services/mobile-development",
 },
 {
   id: 2,
@@ -51,6 +51,15 @@ const services = [
   technologies: ["Adrobe XD", "Marvel", "Figma"],
   icon: <Shield className="w-8 h-8" />,
   link: "/services/UIUX",
+},
+
+{
+  id: 7,
+  title: "Cyber Security",
+  description: "User-focused designs that ensure seamless experience and engagement.",
+  technologies: ["Adrobe XD", "Marvel", "Figma"],
+  icon: <Shield className="w-8 h-8" />,
+  link: "/services/cyber-security",
 },
 
 ]
@@ -179,13 +188,14 @@ const ServicesSection = () => {
           <div className="inline-flex items-center space-x-4 bg-white rounded-full px-8 py-4 shadow-lg border border-gray-100">
             <span className="text-gray-600">Ready to get started?</span>
             <a
-              href="https://wa.me/923405542097"
-              className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-2 rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contact Us
-            </a>
+            href="https://wa.me/923405542097"
+            className="block w-full text-center bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-2 rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 sm:inline-block sm:w-auto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact Us
+          </a>
+
           </div>
         </div>
       </div>

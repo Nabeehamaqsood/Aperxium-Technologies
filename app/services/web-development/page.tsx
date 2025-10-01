@@ -291,9 +291,20 @@ export default function WebDevelopmentPage() {
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto text-gray-700">
               Let's create a powerful web solution that drives your business forward with modern technologies.
             </p>
-            <Button size="lg" className="bg-[#3db1a2] hover:bg-[#2e8f7f] text-white px-8 py-4 text-lg">
-              Start Development <ArrowRight className="ml-2 w-5 h-5" />
+           <Button
+              asChild
+              size="lg"
+              className="bg-[#3db1a2] hover:bg-[#2e8f7f] text-white px-8 py-4 text-lg"
+            >
+              <a
+                href="https://wa.me/923405542097"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Start Development <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
+
           </div>
         </section>
       </div>

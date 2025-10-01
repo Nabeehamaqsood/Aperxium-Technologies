@@ -63,22 +63,24 @@ export default function TeamPage() {
         {/* Team Grid */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6 md:px-12 lg:px-20">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {teamMembers.map((member, index) => (
                 <Card
                   key={index}
-                  className="rounded-full w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 
+                  className="rounded-xl w-full aspect-[4/5] max-w-[260px] mx-auto
                              bg-gradient-to-br from-[#2e8f7f] to-[#3db1a2] 
                              text-white text-center shadow-lg hover:shadow-2xl 
-                             hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto"
+                             hover:scale-105 transition-all duration-300 flex items-center justify-center"
                 >
-                  <CardContent className="flex flex-col items-center text-center">
-                    <img
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full object-cover mb-4 border-4 border-white shadow-md"
-                    />
-                    <h3 className="text-base sm:text-lg font-semibold">{member.name}</h3>
+                  <CardContent className="flex flex-col items-center text-center p-5 w-full">
+                    <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-lg overflow-hidden mb-5 border-4 border-white shadow-md bg-white">
+                      <img
+                        src={member.image || "/placeholder.svg"}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2">{member.name}</h3>
                     <p className="text-xs sm:text-sm font-medium opacity-90">{member.role}</p>
                   </CardContent>
                 </Card>
@@ -118,7 +120,6 @@ export default function TeamPage() {
                   Send Your Resume
                 </a>
               </Button>
-
             </div>
           </div>
         </section>
