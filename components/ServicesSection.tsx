@@ -183,21 +183,20 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Bottom CTA Section - Fixed WhatsApp link */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-4 bg-white rounded-full px-8 py-4 shadow-lg border border-gray-100">
-            <span className="text-gray-600">Ready to get started?</span>
-            <a
-            href="https://wa.me/923405542097"
-            className="block w-full text-center bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-2 rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 sm:inline-block sm:w-auto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contact Us
-          </a>
-
-          </div>
-        </div>
+      {/* Bottom CTA Section - Fixed WhatsApp link */}
+<div className="text-center mt-16">
+  <div className="inline-flex items-center justify-center gap-4 bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100">
+    <span className="text-gray-600 whitespace-nowrap">Ready to get started?</span>
+    <a
+      href="https://wa.me/923405542097"
+      className="inline-flex items-center justify-center bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-2 rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 whitespace-nowrap"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Contact Us
+    </a>
+  </div>
+</div>
       </div>
     </section>
   )

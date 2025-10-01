@@ -10,25 +10,25 @@ export default function TeamSection() {
           A diverse group of passionate innovators driving the future of technology.
         </p>
 
-        {/* ✅ Team Grid with 3 members per row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-          {teamMembers.slice(0, 3).map((member, index) => (
+        {/* ✅ Team Grid with minimal gap */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-1.5 lg:gap-2 justify-center">
+          {teamMembers.slice(0, 4).map((member, index) => (
             <Card
               key={index}
-              className="rounded-xl w-full aspect-[4/5] max-w-[260px] mx-auto
+              className="rounded-xl w-full aspect-[4/5] max-w-[180px] sm:max-w-[200px] lg:max-w-[260px] mx-auto
                          bg-gradient-to-br from-[#2e8f7f] to-[#3db1a2] 
                          text-white text-center shadow-lg hover:shadow-2xl 
                          hover:scale-105 transition-all duration-300 flex items-center justify-center"
             >
-              <CardContent className="flex flex-col items-center text-center p-5 w-full">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-lg overflow-hidden mb-5 border-4 border-white shadow-md bg-white">
+              <CardContent className="flex flex-col items-center text-center p-2 sm:p-3 w-full">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-lg overflow-hidden mb-2 sm:mb-3 border-4 border-white shadow-md bg-white">
                   <img
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold mb-2">{member.name}</h3>
+                <h3 className="text-sm sm:text-base lg:text-lg font-semibold">{member.name}</h3>
                 <p className="text-xs sm:text-sm font-medium opacity-90">{member.role}</p>
               </CardContent>
             </Card>

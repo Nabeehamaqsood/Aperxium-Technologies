@@ -16,7 +16,10 @@ export const teamMembers = [
       role: "Graphic Designer",
       image: "images/Waleed.jpg",
     },
-          
-
+    {
+      name: "Muhammad Abdullah ",
+      role: "App Developer",
+      image: "images/Abdullah .jpg",
+    },
 
   ]
